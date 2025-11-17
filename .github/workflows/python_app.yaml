@@ -2,7 +2,7 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
 # TODO: Change the workflow name to something more specific
-name: Python application
+name: Python Apps Spotify Explorer CI
 
 # This defines the triggers for the workflow
 # i.e. when the workflow will run
@@ -64,10 +64,10 @@ jobs:
     # This step checks code formatting with ruff
     - name: Check formatting with ruff
       run: |
-        uvx ruff format --check .
+        uvx ruff format
 
     # This step runs type checking with mypy
     - name: Type check with mypy
       run: |
-        uvx ty check .
+        uvx ty check
 
