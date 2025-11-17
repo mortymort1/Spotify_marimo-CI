@@ -61,3 +61,12 @@ jobs:
       run: |
     - uses: astral-sh/ruff-action@v3
     # TODO: Add steps to run formatting steps and type checking
+    # This step checks code formatting with ruff
+    - name: Check formatting with ruff
+      run: |
+        uv run ruff format --check .
+
+    # This step runs type checking with mypy
+    - name: Type check with mypy
+      run: |
+        uv run mypy .
