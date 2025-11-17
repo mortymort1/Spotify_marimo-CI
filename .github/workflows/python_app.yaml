@@ -60,7 +60,7 @@ jobs:
     - name: Lint with ruff
       run: |
         uv run ruff check .
-    - uses: astral-sh/ruff-action@v3
+      uses: astral-sh/ruff-action@v3
     # TODO: Add steps to run formatting steps and type checking
     # This step checks code formatting with ruff
     - name: Check formatting with ruff
@@ -72,12 +72,3 @@ jobs:
       run: |
         uv run mypy .
 
-    # Format the files
-    - name: Format with ruff
-      run: |
-        uv run ruff format .
-
-    # Check what will be linted
-    - name: Check linting with ruff
-      run: |
-        uv run ruff check .
